@@ -1,16 +1,10 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
 /* Banner */
 
 #banner {
-    @include vendor('align-items', 'center');
-    @include vendor('background-image', 'url("../assets/images/banner.jpg")');
-    @include vendor('display', 'flex');
-    @include padding(4em, 0, (2em, 0, 0, 0));
+    align-items: center;
+    background-image: url("../assets/images/banner.jpg");
+    display: flex;
+    padding: 6em 0 2em 0;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,9 +18,12 @@
     position: relative;
     top: -3.25em;
     &:after {
-        @include vendor('transition', 'opacity #{_duration(banner)} ease');
-        @include vendor('transition-delay', '0.75s');
-        @include vendor('pointer-events', 'none');
+        @include vendor('transition',
+        'opacity #{_duration(banner)} ease');
+        @include vendor('transition-delay',
+        '0.75s');
+        @include vendor('pointer-events',
+        'none');
         background-color: _palette(bg);
         content: '';
         display: block;
@@ -42,7 +39,12 @@
         font-size: 3.25em;
     }
     >.inner {
-        @include vendor('transition', ( 'opacity 1.5s ease', 'transform 0.5s ease-out', 'filter 0.5s ease', '-webkit-filter 0.5s ease'));
+        padding: 4em 0 2em 0;
+        margin: 0 auto;
+        max-width: 65em;
+        width: calc(100% - 6em);
+        @include vendor('transition',
+        ( 'opacity 1.5s ease', 'transform 0.5s ease-out', 'filter 0.5s ease', '-webkit-filter 0.5s ease'));
         padding: 0 !important;
         position: relative;
         z-index: 2;
@@ -59,8 +61,10 @@
             }
         }
         .content {
-            @include vendor('display', 'flex');
-            @include vendor('align-items', 'center');
+            @include vendor('display',
+            'flex');
+            @include vendor('align-items',
+            'center');
             margin: 0 0 _size(element-margin) 0;
             >* {
                 margin-left: 1.5em;
@@ -120,8 +124,10 @@
             opacity: 1.0;
         }
         >.inner {
-            @include vendor('filter', 'blur(0.125em)');
-            @include vendor('transform', 'translateX(-0.5em)');
+            @include vendor('filter',
+            'blur(0.125em)');
+            @include vendor('transform',
+            'translateX(-0.5em)');
             opacity: 0;
         }
     }
@@ -129,7 +135,7 @@
         background-attachment: scroll;
     }
     @include breakpoint(small) {
-        @include padding(3em, 0, (2em, 0, 0, 0));
+        padding: 3em;
         height: auto;
         margin-bottom: -2.75em;
         max-height: none;
@@ -154,7 +160,7 @@
         }
     }
     @include breakpoint(xsmall) {
-        @include padding(4em, 0, (2em, 0, 0, 0));
+        padding: 4em;
         >.inner {
             .content {
                 p {
@@ -165,7 +171,7 @@
             }
         }
         &.major {
-            @include padding(6em, 0, (2em, 0, 0, 0));
+            padding: 6em;
         }
     }
 }
